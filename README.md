@@ -83,7 +83,7 @@ catkin_make
 ```
 Make sure, the openHAB-address and /-user is set correctly in **iot_bridge/scripts/iot_bridge**
 ```python
-#iot_bridge.py
+#iot_bridge
 ...
   def __init__(self):
     self.iot_host=rospy.get_param(BASENAME+'/host',"openHAB-IP")
