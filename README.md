@@ -5,19 +5,18 @@ It also provides a ROS-bridge and several addons
 
 **Table of content:**
 
-
-| core      |   |addons         |                   |
-|-          |-  |-              |-                  |
-| openHAB   |   | ROS-bridge    | e-mail client     |
-| HABmin    |   | gcal-parser   | emoncms client    |
-
+| core         |addons                            |
+|------------|------------|------------|
+| openHAB      | ROS-bridge    |
+| HABmin      | gcal-parser  |
+|| e-mail client     |
+|| emoncms client    |
 It is specially adapted for the "Institut für Künstliche Intelligenz" at Hochschule Ravensburg-Weingarten with a user "iki" and the usual password (without numbers)
-
 
 The following Z-Wave-devices are included
 
 |Quantity   |Type               |Description                        |
-|-          |-                  |-                                  |
+|-----------|-----------|-----------|
 |1          |USB-Controllerstick|Aeon Labs Z-Stick S2               |
 |2          |Wall-Plug          |Fibaro Wall-Plug FGWPE 101         |
 |3          |Thermostat         |Danfoss living connect Z           |
@@ -30,7 +29,7 @@ Find the controlling webpage at **http://{Server-IP}:8080/ and the HABmin config
 There is also a subsystem for external purposes, i.e. exhibition-Fair demonstrations
 
 |Quantity   |Type               |Description                |
-|-          |-                  |-                          |
+|-----------|-----------|-----------|
 |1          |USB-Controllerstick|Aeon Labs Z-Stick S2       |
 |1          |Wall-Plug          |Fibaro Wall-Plug FGWPE 101 |
 
