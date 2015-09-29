@@ -1,0 +1,34 @@
+Group	All
+Group	Sensors (All)
+Group	Switches (All)
+Group	Thermostat (All)
+Group	ROS (All)
+Group	Battery (All)
+
+
+String	ROS_Status 		"ROS [%s]"
+
+Switch	Switch_0		"Switch 0"				(Switches,ROS)		{ zwave="8:command=sensor_binary, respond_to_basic=true" }
+Number	Battery_0		"Switch 0 Battery level [%d %%]"	(Switches,ROS)		{ zwave="8:command=battery" }
+Switch	Switch_1		"Switch 1"				(Switches,ROS)		{ zwave="2:command=switch_binary" }
+Number	Switch_1_Energy		"Switch 1 energy usage [%.1f W]"	(Switches,ROS)		{ zwave="2:command=sensor_multilevel" }
+Number	Switch_1_TotalEnergy	"Switch 1 total energy usage [%.3f KWh]"(Switches,ROS,All)		{ zwave="2:command=meter" }
+Switch	Switch_2		"Switch 2"				(Switches,ROS)		{ zwave="3:command=switch_binary" }
+Number	Switch_2_Energy		"Switch 2 energy usage [%.1f W]"	(Switches,ROS,All)		{ zwave="3:command=sensor_multilevel" }
+Number	Switch_2_TotalEnergy	"Switch 2 total energy usage [%.3f KWh]"(Switches,ROS,All)		{ zwave="3:command=meter" }
+Number	Sensor1_Temperature	"Temperature [%.2f °C]"			(Sensors,ROS)		{ zwave="6:command=sensor_multilevel, sensor_type=1" }
+Number	Sensor1_Humidity	"Humidity [%.0f %%]"			(Sensors,ROS)		{ zwave="6:command=sensor_multilevel, sensor_type=5" }
+Contact	Sensor1_Motion		"Motion [%s]"				(Sensors,ROS)		{ zwave="6:command=sensor_binary, respond_to_basic=true" }
+Number	Sensor1_Luminance	"Luminance [%.0f Lux]"			(Sensors,ROS)		{ zwave="6:command=sensor_multilevel,sensor_type=3" }
+Number	Sensor1_Battery		"Sensor 1 Battery level [%s %%]"		(Sensors,ROS,Battery)		{ zwave="6:command=battery" }
+Number	Sensor2_Temperature	"Temperature [%.2f °C]"			(Sensors,ROS)		{ zwave="5:command=sensor_multilevel, sensor_type=1" }
+Contact	Sensor2_Motion		"Motion [%s]"				(Sensors,ROS)		{ zwave="5:command=sensor_binary, respond_to_basic=true" }
+Number	Sensor2_Luminance	"Luminance [%.0f Lux]"			(Sensors,ROS)		{ zwave="5:command=sensor_multilevel,sensor_type=3" }
+Number	Sensor2_Battery		"Sensor 2 Battery level [%s %%]"		(Sensors,ROS,Battery)		{ zwave="5:command=battery" }
+Contact	Door_Hiwi		"HiWi-Door [%s]"			(Sensors,ROS)		{ zwave="7:command=sensor_binary, respond_to_basic=true" }
+Number	Door_Hiwi_Battery	"HiWi-Door Battery level [%s %%]"	(Sensors,ROS,Battery)		{ zwave="7:command=battery" }
+
+Number	Thermostat1_Set		"Thermostat 1 setpoint [%.1f °C]"	(Thermostat,ROS)		{ zwave="10:command=thermostat_setpoint, setpoint_type=1, setpoint_scale=0" }
+Number	Thermostat1_Battery	"Thermostat 1 Battery level [%d %%]"	(Thermostat,ROS,Battery)		{ zwave="10:command=battery" }
+Number	Thermostat2_Set		"Thermostat 2 setpoint [%.1f °C]"	(Thermostat,ROS)		{ zwave="11:command=thermostat_setpoint, setpoint_type=1, setpoint_scale=0" }
+Number	Thermostat2_Battery	"Thermostat 2 Battery level [%d %%]"	(Thermostat,ROS,Battery)		{ zwave="11:command=battery" }

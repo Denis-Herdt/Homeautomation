@@ -1,0 +1,725 @@
+
+
+
+
+
+
+
+<!DOCTYPE html><html lang="en" class="devsite"><head><script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(c){a.readyCallbacks.push(c)};window.devsite.ready=a.ready;a.timing={};window.devsite=a;window.devsite.timing=a.timing;a.timing.timers=[];a.timing.tick=function(c,b,g){for(var d=0;d<a.timing.timers.length;d++)a.timing.timers[d].tick(c,b,g)};window.devsite.timing.tick=a.timing.tick;a.timing.report=function(c){a.setTimeout(function(){for(var b=0;b<a.timing.timers.length;b++)window.jstiming.report(a.timing.timers[b],c)},500)};
+a.timing.init=function(c){a.timing.timers.push(window.jstiming.load);if(c){var b=new window.jstiming.Timer;b.name=c;a.timing.timers.push(b)}document.addEventListener&&window.addEventListener&&(document.addEventListener("DOMContentLoaded",a.timing.handleDomContentLoaded,!1),window.addEventListener("load",a.timing.handleLoad,!1))};a.timing.handleDomContentLoaded=function(){a.timing.tick("ol");document.removeEventListener("DOMContentLoaded",a.timing.handleDomContentLoaded,!1)};
+a.timing.handleLoad=function(){window.removeEventListener("load",a.timing.handleLoad,!1);var c=document.querySelector("#devsite-request-elapsed");c&&(c=parseInt(c.getAttribute("data-request-elapsed"),10))&&(a.timing.tick("_st_start",null,1),a.timing.tick("st","_st_start",1+c));a.timing.tick("prt");a.timing.report()};(function(){function c(b){this.t={};this.tick=function(b,c,d){var e=void 0!=d?d:(new Date).getTime();this.t[b]=[e,c];if(void 0==d)try{window.console.timeStamp("CSI/"+b)}catch(f){}};this.tick("start",null,b)}var b;window.performance&&(b=window.performance.timing);var g=b?new c(b.responseStart):new c;window.jstiming={Timer:c,load:g};if(b){var d=b.navigationStart,f=b.responseStart;0<d&&f>=d&&(window.jstiming.srt=f-d)}if(b){var e=window.jstiming.load;0<d&&f>=d&&(e.tick("_wtsrt",void 0,d),e.tick("wtsrt_",
+"_wtsrt",f),e.tick("tbsd_","wtsrt_"))}try{b=null,window.chrome&&window.chrome.csi&&(b=Math.floor(window.chrome.csi().pageT),e&&0<d&&(e.tick("_tbnd",void 0,window.chrome.csi().startE),e.tick("tbnd_","_tbnd",d))),null==b&&window.gtbExternal&&(b=window.gtbExternal.pageT()),null==b&&window.external&&(b=window.external.pageT,e&&0<d&&(e.tick("_tbnd",void 0,window.external.startE),e.tick("tbnd_","_tbnd",d))),b&&(window.jstiming.pt=b)}catch(h){}})();
+devsite.timing.init('DocPage');</script><link href="https://developers.google.com/google-apps/calendar/quickstart/python" rel="canonical"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link href="https://plus.google.com/+GoogleDevelopers/" rel="publisher"><link rel="alternate"
+              href="https://developers.google.com/google-apps/calendar/quickstart/python?hl=en"
+              hreflang="en"><meta name="xsrf_token" content="v6md2x_gJqx81vKf5SAZDAnO3cHE0bBnJeKfpXpGuIQ6MTQzOTQ2MDQ0MDQ0NjAwMA" /><link rel="stylesheet"
+            href="https://developers.google.com/_static/7df9839536/css/devsite-red.css"><link href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,700"
+            rel="stylesheet"><link rel="shortcut icon"
+            href="//www.gstatic.com/images/icons/material/product/2x/developers_32dp.png"><link rel="apple-touch-icon"
+            href="//www.gstatic.com/images/icons/material/product/2x/developers_64dp.png"><link rel="search"
+            type="application/opensearchdescription+xml"
+            title="Google Developers"
+            href="/s/opensearch.xml"><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>
+      var ___gcfg = ___gcfg || {};
+      ___gcfg.lang = 'en';
+      </script><style></style><script>devsite.timing.tick('cl');</script><meta property="og:site_name" content="Google Developers"><meta property="og:type" content="website"><meta property="og:url" content="https://developers.google.com/google-apps/calendar/quickstart/python"><meta property="og:locale" content="en"><script>
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script><title>Python Quickstart &nbsp; | &nbsp;
+      Google Calendar API &nbsp; | &nbsp;
+      Google Developers</title><meta property="og:title" content="Python Quickstart"></head><body class="devsite-doc-page
+                 "
+          id="top_of_page"><script>
+        var dataLayer = [{"language": {"requested": "en", "served": "en"}, "projectName": "Google Calendar API", "signedIn": "False", "internalUser": "False"}];
+      
+      </script><div class="devsite-wrapper"><header class="devsite-top-section
+               
+               "><div class="devsite-top-logo-row-wrapper-wrapper"><div class="devsite-top-logo-row-wrapper"><div class="devsite-top-logo-row devsite-full-site-width"><a class="devsite-logo gc-analytics-event" href="/" data-category="Site-Wide Custom Events"
+            data-label="Site logo"><img src="https://developers.google.com/_static/7df9839536/images/redesign-14/devsite-logo-white-icon.svg" alt="Google Developers icon" class="devsite-logo-icon"><img src="https://developers.google.com/_static/7df9839536/images/redesign-14/devsite-logo-white-wordmark.svg" alt="Google Developers" class="devsite-logo-wordmark"></a><div class="devsite-search-wrapper devsite-history-enabled"><form class="devsite-search-form" action="/s/results" method="GET" id="top-search"><div id="searchbox" class="devsite-searchbox"><input placeholder='Search'
+                     type="text"
+                     class="devsite-search-field devsite-search-query"
+                     name="q"
+                     value=""
+                     autocomplete="off"><div class="devsite-search-image"></div></div><input type="hidden"
+                   name="p"
+                   id="search_project"
+                   value="/google-apps/calendar"
+                   data-project-name="Google Calendar API"
+                   data-project-path="/google-apps/calendar"
+                   data-query-match=""><input type="hidden" id="suggest-category-label-2" value="Pages in Google Calendar API" /><input type="hidden" id="suggest-category-label-3" value="Reference in Google Calendar API" /><input type="hidden" id="suggest-category-label-1" value="Products" /><input type="hidden" id="suggest-all-results-label" value="See all results for" /></form></div><a href="https://www.google.com/accounts/ServiceLogin?service=ahsid&amp;passive=true&amp;continue=https://developers.google.com/google-apps/calendar/quickstart/python&amp;ltmpl="
+           class="devsite-user-signin devsite-top-button button gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Sign in button">
+          
+          Sign in
+        </a><button type="button" class="devsite-search-button button-flat">
+          
+          Search
+        </button></div></div></div><div class="devsite-collapsible-section"><div class="devsite-header-background devsite-full-site-width"
+         ><div class="devsite-site-nav-row devsite-full-site-width"><nav class="devsite-site-nav devsite-nav"><ul class="devsite-site-nav-list"><li class="devsite-breadcrumb-wrapper
+                
+                       devsite-breadcrumb-parent
+                "><a href="/products/" class="devsite-breadcrumb gc-analytics-event"
+                  data-category="Site-Wide Custom Events"
+                  data-label="Breadcrumb: parent" data-value="1">
+                Products
+              </a></li><li class="devsite-breadcrumb-wrapper
+                
+                       devsite-breadcrumb-parent
+                "><div class="devsite-breadcrumb-guillemet"></div><a href="/google-apps/" class="devsite-breadcrumb gc-analytics-event"
+                  data-category="Site-Wide Custom Events"
+                  data-label="Breadcrumb: parent" data-value="2">
+                Google Apps
+              </a></li><li class="devsite-breadcrumb-wrapper
+                
+                       devsite-breadcrumb-project
+                "><div class="devsite-breadcrumb-guillemet"></div><a href="/google-apps/calendar/" class="devsite-breadcrumb gc-analytics-event"
+                  data-category="Site-Wide Custom Events"
+                  data-label="Breadcrumb: project" data-value="3">
+                Google Calendar API
+              </a></li><li class="devsite-breadcrumb-wrapper
+                
+                       devsite-breadcrumb-tab
+                "><div class="devsite-breadcrumb-guillemet"></div><a href="/google-apps/calendar" class="devsite-breadcrumb gc-analytics-event"
+                  data-category="Site-Wide Custom Events"
+                  data-label="Breadcrumb: tab" data-value="4">
+                Guides
+              </a></li><li class="devsite-breadcrumb-wrapper
+                
+                       devsite-breadcrumb-self
+                "><div class="devsite-breadcrumb-guillemet"></div><a href="#top_of_page" class="devsite-breadcrumb gc-analytics-event"
+                  data-category="Site-Wide Custom Events"
+                  data-label="Breadcrumb: current_page" data-value="5">
+                Python Quickstart
+              </a></li></ul></nav></div><div class="devsite-product-id-row devsite-full-site-width"><div class="devsite-product-id-row-links-container"><a class="devsite-product-logo-link gc-analytics-event" href="/google-apps/calendar/"
+        data-category="Site-Wide Custom Events" data-label="Project logo (header)"><div class="devsite-product-logo-container"><img class="devsite-product-logo" src="https://www.gstatic.com/images/icons/material/product/2x/calendar_64dp.png" alt="Google Calendar API"></div></a><a class="devsite-product-name gc-analytics-event" href="/google-apps/calendar/"
+        data-category="Site-Wide Custom Events" data-label="Project name (header)">
+      Google Calendar API
+    </a></div></div><div class="devsite-doc-set-nav-row devsite-full-site-width"><nav class="devsite-doc-set-nav devsite-nav"><ul class="devsite-doc-set-nav-tab-list"><li class="devsite-doc-set-nav-tab-container"><a href="/google-apps/calendar" class="devsite-doc-set-nav-active
+                                       devsite-doc-set-nav-tab gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Tab: Guides">
+          Guides
+        </a></li><li class="devsite-doc-set-nav-tab-container"><a href="/google-apps/calendar/v3/reference" class="
+                                       devsite-doc-set-nav-tab gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Tab: Reference">
+          Reference
+        </a></li></ul></nav></div><button type="button" id="devsite-feedback-project" class="devsite-feedback-button devsite-top-button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Send Feedback Button">
+        
+        Send feedback
+        </button></div></div></header><script>
+  if (window.jQuery) {
+    $(document).ready(function() {
+      if (window.devsite && window.devsite.search) {
+        
+        window.devsite.search.init('en', false, null)
+      }
+    });
+  }
+</script><div class="kd-butterbar"><span><span class="message"></span><a href="#" class="kd-butterbar-dismiss">Hide</a></span></div><div id="gc-wrapper"itemscope itemtype="http://schema.org/Article"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Google Calendar API&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;}, &quot;gaid&quot;: &quot;UA-24532603-1&quot;}"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Google Calendar API&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;}, &quot;gaid&quot;: &quot;UA-49880327-1&quot;}">
+
+        
+          <div class="devsite-article-mask"></div>
+          <div class="devsite-site-mask"></div>
+          
+            
+  <nav class="devsite-section-nav-responsive devsite-nav" tabindex="0">
+    <ul><li class="devsite-nav-item"><a href="/google-apps/calendar" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Overview</a></li><li class="devsite-nav-item devsite-nav-item-heading"><a class="devsite-nav-title devsite-nav-title-no-path ">Get Started</a><li class="devsite-nav-item"><a href="/google-apps/calendar/get_started" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Ways to Get Started</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/concepts" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Calendar Concepts</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/downloads" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Downloads</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><a class="devsite-nav-title devsite-nav-title-no-path ">Quickstarts</a><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/dotnet" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">.NET</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/android" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Android</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/go" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Go</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/apps-script" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Google Apps Script</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/ios" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">iOS</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/java" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Java</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/js" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">JavaScript</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/nodejs" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Node.js</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/php" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">PHP</a></li><li class="devsite-nav-item devsite-nav-active"><a href="/google-apps/calendar/quickstart/python" class="devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Python</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/ruby" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Ruby</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><a class="devsite-nav-title devsite-nav-title-no-path ">Use the Calendar API</a><li class="devsite-nav-item"><a href="/google-apps/calendar/auth" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Authorize Requests</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/create-events" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Create Events</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/recurringevents" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Recurring Events</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/v3/sync" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Synchronize Resources</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/v3/push" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Get Push Notifications</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/v3/version-resources" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Get Versioned Resources</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/v3/pagination" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Pagination</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/batch" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Batch Requests</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/performance" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Improve Performance</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><a class="devsite-nav-title devsite-nav-title-no-path ">Calendar Gadgets</a><li class="devsite-nav-item"><a href="/google-apps/calendar/gadgets" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Overview</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/gadgets/event/" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Event Gadgets</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/gadgets/sidebar/" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">Sidebar Gadgets</a></li></li><li class="devsite-nav-item"><hr class="devsite-nav-break"></li><li class="devsite-nav-item"><a href="/google-apps/calendar/caldav/v2/guide" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Hamburger menu" data-action="Link Click">CalDAV API Developer's Guide</a></li></ul>
+  </nav>
+
+          
+          <div class="devsite-main-content clearfix">
+
+          
+          
+
+          
+  
+  
+    
+    
+      
+  <nav class="devsite-section-nav devsite-nav">
+    <ul><li class="devsite-nav-item"><a href="/google-apps/calendar" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Overview</a></li><li class="devsite-nav-item devsite-nav-item-heading"><a class="devsite-nav-title devsite-nav-title-no-path ">Get Started</a><li class="devsite-nav-item"><a href="/google-apps/calendar/get_started" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Ways to Get Started</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/concepts" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Calendar Concepts</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/downloads" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Downloads</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><a class="devsite-nav-title devsite-nav-title-no-path ">Quickstarts</a><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/dotnet" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">.NET</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/android" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Android</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/go" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Go</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/apps-script" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Google Apps Script</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/ios" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">iOS</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/java" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Java</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/js" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">JavaScript</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/nodejs" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Node.js</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/php" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">PHP</a></li><li class="devsite-nav-item devsite-nav-active"><a href="/google-apps/calendar/quickstart/python" class="devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Python</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/quickstart/ruby" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Ruby</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><a class="devsite-nav-title devsite-nav-title-no-path ">Use the Calendar API</a><li class="devsite-nav-item"><a href="/google-apps/calendar/auth" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Authorize Requests</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/create-events" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Create Events</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/recurringevents" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Recurring Events</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/v3/sync" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Synchronize Resources</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/v3/push" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Get Push Notifications</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/v3/version-resources" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Get Versioned Resources</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/v3/pagination" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Pagination</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/batch" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Batch Requests</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/performance" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Improve Performance</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><a class="devsite-nav-title devsite-nav-title-no-path ">Calendar Gadgets</a><li class="devsite-nav-item"><a href="/google-apps/calendar/gadgets" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Overview</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/gadgets/event/" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Event Gadgets</a></li><li class="devsite-nav-item"><a href="/google-apps/calendar/gadgets/sidebar/" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">Sidebar Gadgets</a></li></li><li class="devsite-nav-item"><hr class="devsite-nav-break"></li><li class="devsite-nav-item"><a href="/google-apps/calendar/caldav/v2/guide" class="devsite-nav-title gc-analytics-event " data-category="Site-Wide Custom Events" data-label="Left nav" data-action="click">CalDAV API Developer's Guide</a></li></ul>
+  </nav>
+
+    
+
+    
+  <nav class="devsite-page-nav devsite-nav"></nav>
+
+
+      <article class="devsite-article">
+        <div class="devsite-article-inner">
+  
+          
+  
+
+
+
+
+  
+  <div class="devsite-expand-section-nav-container">
+  
+    
+    <button type="button" class="devsite-expand-section-nav button-flat">Show Navigation</button>
+  
+  
+  <h1 itemprop="name" class="devsite-page-title">
+    Python Quickstart
+  </h1>
+  
+  </div>
+  
+    <nav class="devsite-page-nav-embedded devsite-nav"></nav>
+  
+  <div class="devsite-article-body clearfix" itemprop="articleBody">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Complete the steps described in the rest of this page, and in about five minutes
+you'll have a simple Python command-line application that makes requests to the
+Google Calendar API.</p>
+<nav class="inline-toc"><ol class="toc"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#step_1_enable_the_api_name">Step 1: Enable the Google Calendar API</a></li><li><a href="#step_2_install_the_google_client_library">Step 2: Install the Google Client Library</a></li><li><a href="#step_3_set_up_the_sample">Step 3: Set up the sample</a></li><li><a href="#step_4_run_the_sample">Step 4: Run the sample</a></li><li><a href="#further_reading">Further reading</a></li></ol></nav>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To run this quickstart, you'll need:</p>
+<ul>
+<li>Python 2.6 or greater.</li>
+<li>The <a href="https://pypi.python.org/pypi/pip">pip</a> package management tool.</li>
+<li>Access to the internet and a web browser.
+
+<li>A Google account with Google Calendar enabled.</li>
+</li>
+</ul>
+<h2 id="step_1_enable_the_api_name">Step 1: Enable the Google Calendar API</h2>
+<ol>
+<li>Use <a href="https://console.developers.google.com/start/api?id=calendar" target="_blank">this wizard</a>
+   to create or select a project in the Google Developers Console and
+   automatically enable the API.</li>
+<li>In the sidebar on the left, select <strong>APIs &amp; auth</strong> and then
+   <strong>Consent screen</strong>. Select an <strong>EMAIL ADDRESS</strong>, enter a <strong>PRODUCT NAME</strong>
+   if not already set, and click the <strong>Save</strong> button.
+</li>
+<li>In the sidebar under <strong>APIs &amp; auth</strong> select <strong>Credentials</strong>. In the new
+   tab that opens, click <strong>Create new Client ID</strong>.
+
+  </li>
+<li>Select the application type <strong>Installed application</strong>, the installed
+   application type <strong>Other</strong>, and click the <strong>Create Client ID</strong> button.
+  
+
+
+  </li>
+<li>Click the <strong>Download JSON</strong> button under your new client ID. Move this file
+   to your working directory and rename it <code>client_secret.json</code>.
+  
+
+</li>
+</ol>
+<h2 id="step_2_install_the_google_client_library">Step 2: Install the Google Client Library</h2>
+<p>Run the following command to install the library using pip:</p>
+<pre class="prettyprint notranslate" translate="no"><code>$ pip install --upgrade google-api-python-client
+</code></pre>
+<p>See the library's <a href="/api-client-library/python/start/installation">installation
+page</a> for the alternative
+installation options.</p>
+<h2 id="step_3_set_up_the_sample">Step 3: Set up the sample</h2>
+<p>Create a file named <code>quickstart.py</code> in your working directory and copy in the
+following code:</p>
+<pre class="prettyprint">
+import httplib2
+import os
+
+from apiclient import discovery
+import oauth2client
+from oauth2client import client
+from oauth2client import tools
+
+import datetime
+
+try:
+    import argparse
+    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+except ImportError:
+    flags = None
+
+SCOPES = 'https://www.googleapis.com/auth/calendar.readonly'
+CLIENT_SECRET_FILE = 'client_secret.json'
+APPLICATION_NAME = 'Google Calendar API Quickstart'
+
+
+def get_credentials():
+    """Gets valid user credentials from storage.
+
+    If nothing has been stored, or if the stored credentials are invalid,
+    the OAuth2 flow is completed to obtain the new credentials.
+
+    Returns:
+        Credentials, the obtained credential.
+    """
+    home_dir = os.path.expanduser('~')
+    credential_dir = os.path.join(home_dir, '.credentials')
+    if not os.path.exists(credential_dir):
+        os.makedirs(credential_dir)
+    credential_path = os.path.join(credential_dir,
+                                   'calendar-quickstart.json')
+
+    store = oauth2client.file.Storage(credential_path)
+    credentials = store.get()
+    if not credentials or credentials.invalid:
+        flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
+        flow.user_agent = APPLICATION_NAME
+        if flags:
+            credentials = tools.run_flow(flow, store, flags)
+        else: # Needed only for compatability with Python 2.6
+            credentials = tools.run(flow, store)
+        print 'Storing credentials to ' + credential_path
+    return credentials
+
+def main():
+    """Shows basic usage of the Google Calendar API.
+
+    Creates a Google Calendar API service object and outputs a list of the next
+    10 events on the user's calendar.
+    """
+    credentials = get_credentials()
+    http = credentials.authorize(httplib2.Http())
+    service = discovery.build('calendar', 'v3', http=http)
+
+    now = datetime.datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
+    print 'Getting the upcoming 10 events'
+    eventsResult = service.events().list(
+        calendarId='primary', timeMin=now, maxResults=10, singleEvents=True,
+        orderBy='startTime').execute()
+    events = eventsResult.get('items', [])
+
+    if not events:
+        print 'No upcoming events found.'
+    for event in events:
+        start = event['start'].get('dateTime', event['start'].get('date'))
+        print start, event['summary']
+
+
+if __name__ == '__main__':
+    main()
+
+</pre>
+
+<h2 id="step_4_run_the_sample">Step 4: Run the sample</h2>
+<p>Run the sample using the following command:</p>
+<pre class="prettyprint notranslate" translate="no"><code>$ python quickstart.py
+</code></pre>
+<ol>
+<li><p>The sample will attempt to open a new window or tab in your default
+   browser. If this fails, copy the URL from the console and manually open it in
+   your browser.
+   <p>If you are not already logged into your Google account, you will be
+   prompted to log in. If you are logged into multiple Google accounts, you will
+   be asked to select one account to use for the authorization.</li>
+<li>Click the <strong>Accept</strong> button.</li>
+<li>The sample will proceed automatically, and you may close the window/tab.</li>
+</ol>
+<p>Authorization information is stored on the file system, so subsequent
+executions will not prompt for authorization.</p>
+<aside class="note"><strong>Note:</strong><span> The authorization flow in this example is designed for a command-line
+application. For information on how to perform authorization in a web
+application, see
+<a href="/api-client-library/python/auth/web-app">Using OAuth 2.0 for Web Server Applications</a>.</span></aside>
+<h2 id="further_reading">Further reading</h2>
+<ul>
+<li><a href="/console/help/new/">Google Developers Console help documentation</a></li>
+<li><a href="/api-client-library/python/">Google APIs Client for Python documentation</a>
+
+  <li><a href="/google-apps/calendar/create-events/">Create events</a></li>
+  <li><a href="/google-apps/calendar/v3/reference/">Calendar API reference documentation</a></li>
+</li>
+</ul>
+
+  </div>
+
+  
+        
+<div class="devsite-content-footer">
+
+  
+    
+    <p>Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see our <a href="/site-policies">Site Policies</a>.</p>
+    
+  
+
+  
+    
+    <p class="devsite-content-footer-date" itemprop="datePublished"
+       content="2015-08-07T19:58:25.594950">
+      
+      Last updated August 7, 2015.
+    </p>
+  
+
+</div>
+
+        </div>
+      </article>
+  
+
+          </div>
+        
+
+<footer class="devsite-footer"><nav class="devsite-full-site-width"><ul class="devsite-footer-row"><li class="devsite-footer-linkbox devsite-footer-flex"><h3 class="devsite-footer-linkbox-heading hide-from-toc"><img class="devsite-footer-linkbox-icon" src="https://www.gstatic.com/images/icons/material/system/2x/info_black_24dp.png">Product Info
+          </h3><ul><li class="devsite-footer-linkbox-item"><a href="/google-apps/calendar/downloads" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                Downloads
+              </a></li><li class="devsite-footer-linkbox-item"><a href="/google-apps/calendar/terms" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                Terms of Service
+              </a></li><li class="devsite-footer-linkbox-item"><a href="/google-apps/calendar/pricing" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                Usage Limits
+              </a></li><li class="devsite-footer-linkbox-item"><a href="/google-apps/calendar/v3/whats-new" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                What&#39;s New in v3
+              </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-flex"><h3 class="devsite-footer-linkbox-heading hide-from-toc"><img class="devsite-footer-linkbox-icon" src="https://www.gstatic.com/images/icons/material/system/2x/add_circle_black_24dp.png">Related APIs
+          </h3><ul><li class="devsite-footer-linkbox-item"><a href="/gmail" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                Gmail
+              </a></li><li class="devsite-footer-linkbox-item"><a href="/structured-data" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                Structured Data
+              </a></li><li class="devsite-footer-linkbox-item"><a href="/drive" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                Google Drive
+              </a></li><li class="devsite-footer-linkbox-item"><a href="/apps-script/reference/calendar" class="devsite-footer-linkbox-title gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Content Page Footer Linkbox">
+                Calendar Service in Apps Script
+              </a></li></ul></li></ul></nav></footer><footer class="devsite-site-footer"><nav class="devsite-site-footer-nav devsite-nav devsite-full-site-width"><ul class="devsite-site-footer-column-list"><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Connect</h3></li><li class="devsite-site-footer-item"><a href="https://events.google.com/io2015/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer I/O Link">Google I/O</a></li><li class="devsite-site-footer-item"><a href="https://googledevelopers.blogspot.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Blog Link">Blog</a></li><li class="devsite-site-footer-item"><a href="https://www.facebook.com/pages/Google-Developers/967415219957038" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Facebook Link">Facebook</a></li><li class="devsite-site-footer-item"><a href="https://plus.google.com/+GoogleDevelopers/posts" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer G+ Link">Google+</a></li><li class="devsite-site-footer-item"><a href="https://twitter.com/googledevs" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Twitter Link">Twitter</a></li><li class="devsite-site-footer-item"><a href="https://www.youtube.com/user/GoogleDevelopers" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer YouTube Link">YouTube</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Programs</h3></li><li class="devsite-site-footer-item"><a href="https://www.womentechmakers.com/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Women Techmakers">Women Techmakers</a></li><li class="devsite-site-footer-item"><a href="/groups/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Groups">Google Developer Groups</a></li><li class="devsite-site-footer-item"><a href="/experts/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Experts">Google Developer Experts</a></li><li class="devsite-site-footer-item"><a href="/startups/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Startups">Startup Launchpad</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Careers</h3></li><li class="devsite-site-footer-item"><a href="https://www.google.com/about/careers/teams/client-facing/dev-rel/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer careers">Developer Relations</a></li><li class="devsite-site-footer-item"><a href="https://www.google.com/about/careers/teams/engineering/swe/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer SWE careers">Software Engineering</a></li><li class="devsite-site-footer-item"><a href="https://www.google.com/about/careers/teams/product-management/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer PM careers">Product Management</a></li><li class="devsite-site-footer-item"><a href="https://www.google.com/about/careers/teams/ops-support/technical-writing/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer TW careers">Technical Writing</a></li><li class="devsite-site-footer-item"><a href="https://www.google.com/about/careers/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer more careers">See More</a></li></ul></li><li class="devsite-site-footer-column"><ul class="devsite-site-footer-list"><li class="devsite-site-footer-item"><h3>Explore</h3></li><li class="devsite-site-footer-item"><a href="/android/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android">Android</a></li><li class="devsite-site-footer-item"><a href="/ios/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer iOS">iOS</a></li><li class="devsite-site-footer-item"><a href="/web/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Web">Web</a></li><li class="devsite-site-footer-item"><a href="/games/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Games">Games</a></li><li class="devsite-site-footer-item"><a href="/products/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Products">All Products</a></li></ul></li></ul></nav></footer><footer class="devsite-utility-footer"><nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width"><span class="devsite-utility-footer-links"><a href="/site-terms/">Terms</a>
+      &nbsp; | &nbsp;
+      
+      <a href="https://www.google.com/intl/en/privacy/" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Privacy Link">Privacy</a></span><form class="devsite-utility-footer-language" id="setlang" action="/i18n/setlang/" method="post"><input type="hidden" name="xsrf_token" value="v6md2x_gJqx81vKf5SAZDAnO3cHE0bBnJeKfpXpGuIQ6MTQzOTQ2MDQ0MDQ0NjAwMA" /><select id="footer_language" name="language"><option value="ar"
+              >
+            العربيّة
+          </option><option value="bg"
+              >
+            български
+          </option><option value="ca"
+              >
+            català
+          </option><option value="zh-cn"
+              >
+            简体中文
+          </option><option value="zh-tw"
+              >
+            繁體中文
+          </option><option value="hr"
+              >
+            Hrvatski
+          </option><option value="cs"
+              >
+            česky
+          </option><option value="da"
+              >
+            dansk
+          </option><option value="nl"
+              >
+            Nederlands
+          </option><option value="en"
+               selected="selected" >
+            English
+          </option><option value="fa"
+              >
+            فارسی
+          </option><option value="fi"
+              >
+            suomi
+          </option><option value="fr"
+              >
+            français
+          </option><option value="de"
+              >
+            Deutsch
+          </option><option value="el"
+              >
+            Ελληνικά
+          </option><option value="he"
+              >
+            עברית
+          </option><option value="hi"
+              >
+            Hindi
+          </option><option value="hu"
+              >
+            Magyar
+          </option><option value="id"
+              >
+            Bahasa Indonesia
+          </option><option value="it"
+              >
+            italiano
+          </option><option value="ja"
+              >
+            日本語
+          </option><option value="ko"
+              >
+            한국어
+          </option><option value="lv"
+              >
+            latviešu
+          </option><option value="lt"
+              >
+            Lietuviškai
+          </option><option value="nb"
+              >
+            norsk (bokmål)
+          </option><option value="nn"
+              >
+            norsk (nynorsk)
+          </option><option value="pl"
+              >
+            polski
+          </option><option value="pt-br"
+              >
+            Português Brasileiro
+          </option><option value="pt"
+              >
+            Português
+          </option><option value="ro"
+              >
+            Română
+          </option><option value="ru"
+              >
+            Русский
+          </option><option value="sr"
+              >
+            српски
+          </option><option value="sk"
+              >
+            slovenský
+          </option><option value="sl"
+              >
+            Slovenščina
+          </option><option value="es"
+              >
+            español
+          </option><option value="sv"
+              >
+            svenska
+          </option><option value="th"
+              >
+            ภาษาไทย
+          </option><option value="tr"
+              >
+            Türkçe
+          </option><option value="uk"
+              >
+            Українська
+          </option><option value="vi"
+              >
+            Tiếng Việt
+          </option></select></form></nav></footer><div class="devsite-feedback-dialog devsite-dialog"><div class="devsite-dialog-contents"><h3>Send feedback about...</h3><div class="devsite-feedback-item"><a data-type="documentation" class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Image"><div class="devsite-feedback-item-icon-container"><img class="devsite-feedback-item-icon-white"
+                 src="https://www.gstatic.com/images/icons/material/system/2x/description_white_36dp.png"></div></a><div class="devsite-feedback-item-name">
+          
+          This page
+        </div><div class="devsite-feedback-item-description"><a data-type="documentation" tabindex="0"  class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Docs Feedback Text">Documentation feedback</a></div></div><div class="devsite-feedback-item"><a data-type="product" href="https://code.google.com/a/google.com/p/apps-api-issues/issues/entry?template=Feature%20request&amp;labels=Type-Enhancement,API-Calendar"  class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Image"><img class="devsite-feedback-item-icon" src="https://www.gstatic.com/images/icons/material/product/2x/calendar_64dp.png"></a><div class="devsite-feedback-item-name">
+        Google Calendar API
+        </div><div class="devsite-feedback-item-description"><a data-type="product" tabindex="0" href="https://code.google.com/a/google.com/p/apps-api-issues/issues/entry?template=Feature%20request&amp;labels=Type-Enhancement,API-Calendar"  class="gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Product Feedback Text">Product feedback</a></div></div></div><div class="devsite-dialog-buttons"><button type="button" class="devsite-feedback-cancel button-white gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button">
+        
+        Cancel
+      </button></div></div><script>
+  $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '102919',
+        'bucket': '',
+        'context': '',
+        'version': 'devsite-20150812-r00-rc00.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+  </script></div><script async="" defer="" src="//www.gstatic.com/feedback/api.js"></script><script id="jqueryui" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script><script src="https://developers.google.com/_static2/7df9839536/jsi18n/?hl=en"></script><script src="https://developers.google.com/_static/7df9839536/js/script_foot_closure.js"></script><script src="https://developers.google.com/_static/7df9839536/js/script_foot.js"></script><script>
+        devsite.timing.tick('jl');
+        (function($) {
+          devsite.devsite.Init($, 'devsite',
+              '[]', '',
+              'en', true,
+              '7df9839536', '',
+              true,
+              {"722f3a06f031e904ae074aa731257435": false, "6749dcb526ce9bde6993550c7d928d24": true, "993b1906435224595bd618f6f331ee45": true}, '/google-apps/calendar');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+      </script><script>
+      $('#setlang select').each(function() {
+        if (navigator.userAgent.match(/msie/i)) {
+          $(this).change(function() {
+            $('#setlang').submit();
+          });
+        } else {
+          $(this).kdSelect({'change': function() {
+            $('#setlang').submit();
+          }});
+        }
+      });
+      </script><script>
+        /* <![CDATA[ */
+        var google_conversion_id = 992540712;
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+        var google_conversion_value = 0;
+        /* ]]> */
+      </script><script src="//www.googleadservices.com/pagead/conversion.js"></script><noscript><img height="1" width="1" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;guid=ON&amp;script=0"></noscript><script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=aclknqcuyds7o"></script></div><!-- END DIV.WRAPPER --></body><span id="devsite-request-elapsed" data-request-elapsed="118.129968643"></span></html>

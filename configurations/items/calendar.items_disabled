@@ -1,0 +1,10 @@
+
+Group	Calendar
+Group	All
+
+String OfficeCalName0   "Termin jetzt"      <calendar> (Calendar,All) { caldavPersonal="calendar:Agenda personnel type:ACTIVE eventNr:1 value:NAME" } //eventNr for concurrent events
+DateTime OfficeCalTime0 "Beginn"            <calendar> (Calendar,All) { caldavPersonal="calendar:Agenda personnel type:ACTIVE eventNr:1 value:START" } //eventNr for concurrent events
+String OfficeCalName1   "nächster Termin"  <calendar> (Calendar,All) { caldavPersonal="calendar:Agenda personnel type:UPCOMING eventNr:1 value:NAME" }
+DateTime OfficeCalTime1 "Beginn"            <calendar> (Calendar,All) { caldavPersonal="calendar:Agenda personnel type:UPCOMING eventNr:1 value:START" }
+String OfficeCalName2   "übernächster Termin" <calendar> (Calendar,All){ caldavPersonal="calendar:Agenda personnel type:UPCOMING eventNr:2 value:NAME" }
+DateTime OfficeCalTime2 "Beginn"            <calendar> (Calendar,All){ caldavPersonal="calendar:Agenda personnel type:UPCOMING eventNr:2 value:START" }

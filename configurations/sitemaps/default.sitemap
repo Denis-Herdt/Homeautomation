@@ -1,0 +1,82 @@
+sitemap zwave label="Smarlab"{
+	Frame {
+		Frame label="Status overview"{
+			Text item=ROS_Status label="ROS [%s]"
+			Text item=Sensor1_Battery valuecolor=[<10="red"]
+			Text item=Sensor2_Battery valuecolor=[<10="red"]
+			Text item=Thermostat1_Battery valuecolor=[<10="red"]
+			Text item=Thermostat2_Battery valuecolor=[<10="red"]
+                        Text item=Thermostat3_Battery valuecolor=[<10="red"]
+			Text item=Door1_Hiwi_Battery valuecolor=[<10="red"]
+			Text item=Door2_Printer_Battery valuecolor=[<10="red"]
+		}
+	}
+	Frame {
+		Frame label="Actors"{
+			Group label="Switches" icon="switch-on"{
+				Frame label="Switch 1"{
+					Switch item=Switch1
+					Text item=Switch1_Energy
+					Text item=Switch1_TotalEnergy
+				}
+				Frame label="Switch 2"{
+					Switch item=Switch2
+					Text item=Switch2_Energy
+					Text item=Switch2_TotalEnergy
+				}
+			}
+			Group label="Thermostat" icon="heating"{
+				Frame label="Thermostat 1"{
+					Setpoint item=Thermostat1_Set minValue=4 maxValue=28 step=0.5
+					Text item=Thermostat1_Battery valuecolor=[<10="red"]
+				}
+				Frame label="Thermostat 2"{
+					Setpoint item=Thermostat2_Set minValue=4 maxValue=28 step=0.5
+					Text item=Thermostat2_Battery valuecolor=[<10="red"]
+				}
+				Frame label="Thermostat 3"{
+                                        Setpoint item=Thermostat3_Set minValue=4 maxValue=28 step=0.5
+                                        Text item=Thermostat3_Battery valuecolor=[<10="red"]
+                                }
+			}
+		}
+	}
+	Frame {
+		Frame label="Sensors"{
+			Group label="Motion, Temperature and Luminance" icon="temperature"{
+				Frame label="HiWi-room"{
+					Text item=Sensor1_Motion
+					Text item=Sensor1_Temperature
+					Text item=Sensor1_Humidity
+					Text item=Sensor1_Luminance
+					Text item=Sensor1_Battery valuecolor=[<10="red"]
+				}
+				Frame label="Conference-room"{
+					Text item=Sensor2_Motion
+					Text item=Sensor2_Temperature
+					Text item=Sensor2_Luminance
+					Text item=Sensor2_Battery valuecolor=[<10="red"]
+				}
+			}
+			Group label="Door-/ and windowcontacts" icon="contact"{
+				Frame label="HiWi-Door"{
+					Text item=Door1_Hiwi
+					Text item=Door1_Hiwi_Battery valuecolor=[<10="red"]
+				}
+                                Frame label="Printer-Door"{
+                                        Text item=Door2_Printer
+                                        Text item=Door2_Printer_Battery valuecolor=[<10="red"]
+                                }  
+			}
+		}
+	}
+	Frame{
+		Text label="Info" icon="info"{
+			Text label="OpenHAB Server IKI HS-Weingarten" icon="none"
+			Text label="" icon="none"
+			Text label="Doku       		: http://141.69.58.11/various/smartlab" icon="none"
+			Text label="Configpage 		: {Server-IP}:8080/habmin/index.html" icon="none"
+
+		}
+	}
+}

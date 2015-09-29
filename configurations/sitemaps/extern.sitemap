@@ -1,0 +1,19 @@
+sitemap zwave label="Smarlab"{
+	Frame {
+		Frame label="Switch 1"{
+			Switch item=Switch_1
+			Text item=Switch_1_Energy
+			Text item=Switch_1_TotalEnergy
+		}
+	}
+	Frame{
+		Text label="Info" icon="info"{
+			Text label="OpenHAB Server IKI HS-Weingarten" icon="none"
+			Text label="" icon="none"
+			Text label="Doku       : GitHUB-URL" icon="none"
+			Text label="Server IP  : localhost:8080" icon="none"
+			Text label="Configpage : localhost:8080/habmin/index.html" icon="none"
+			
+		}
+	}
+}

@@ -1,0 +1,21 @@
+// Imports
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+
+rule "autostart gcal_parser"
+when
+    System started
+then
+    logInfo(    "start_gcal_parser.rules", "Parser starts in 1 min")
+    createTimer(now.plusSeconds(60)) [|
+
+        logInfo(    "start_gcal_parser.rules", "Starting GCal-Parser")
+	// initialize all uninitialized items after waiting 90 sec at systemstart or every 10 min.
+
+	executeCommandLine('python configurations/GCal-Parser/gcal_parser.py')
+end        
+
+]
+    
+end

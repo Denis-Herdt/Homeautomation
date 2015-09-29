@@ -1,0 +1,73 @@
+sitemap zwave label="Smarlab"{
+	Frame {
+		Frame label="Status overview"{
+			Text item=ROS_Status label="ROS [%s]"
+			Text item=Sensor1_Battery valuecolor=[<10="red"]
+			Text item=Sensor2_Battery valuecolor=[<10="red"]
+			Text item=Thermostat1_Battery valuecolor=[<10="red"]
+			Text item=Thermostat2_Battery valuecolor=[<10="red"]
+			Text item=Door_Hiwi_Battery valuecolor=[<10="red"]
+		}
+	}
+	Frame {
+		Frame label="Actors"{
+			Group label="Switches" icon="switch-on"{
+				Frame label="Switch 1"{
+					Switch item=Switch_1
+					Text item=Switch_1_Energy
+					Text item=Switch_1_TotalEnergy
+				}
+				Frame label="Switch 2"{
+					Switch item=Switch_2
+					Text item=Switch_2_Energy
+					Text item=Switch_2_TotalEnergy
+				}
+			}
+			Group label="Thermostat" icon="heating"{
+				Frame label="Thermostat 1"{
+					Setpoint item=Thermostat1_Set minValue=4 maxValue=28 step=0.5
+					Text item=Thermostat1_Battery valuecolor=[<10="red"]
+				}
+				Frame label="Thermostat 2"{
+					Setpoint item=Thermostat2_Set minValue=4 maxValue=28 step=0.5
+					Text item=Thermostat2_Battery valuecolor=[<10="red"]
+				}
+			}
+		}
+	}
+	Frame {
+		Frame label="Sensors"{
+			Group label="Motion, Temperature and Luminance" icon="temperature"{
+				Frame label="HiWi-room"{
+					Text item=Sensor1_Motion
+					Text item=Sensor1_Temperature
+					Text item=Sensor1_Humidity
+					Text item=Sensor1_Luminance
+					Text item=Sensor1_Battery valuecolor=[<10="red"]
+				}
+				Frame label="Conference-room"{
+					Text item=Sensor2_Motion
+					Text item=Sensor2_Temperature
+					Text item=Sensor2_Luminance
+					Text item=Sensor2_Battery valuecolor=[<10="red"]
+				}
+			}
+			Group label="Door-/ and windowcontacts" icon="contact"{
+				Frame label="HiWi-Door"{
+					Text item=Door_Hiwi
+					Text item=Door_Hiwi_Battery valuecolor=[<10="red"]
+				}
+			}
+		}
+	}
+	Frame{
+		Text label="Info" icon="info"{
+			Text label="OpenHAB Server IKI HS-Weingarten" icon="none"
+			Text label="" icon="none"
+			Text label="Doku       : http://141.69.58.11/various/smartlab" icon="none"
+			Text label="Server IP  : 141.68.58.53:8080" icon="none"
+			Text label="Configpage : 141.68.58.53:8080/habmin/index.html" icon="none"
+			
+		}
+	}
+}

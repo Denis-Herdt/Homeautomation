@@ -1,0 +1,51 @@
+Group System
+Group All
+
+Number cpuCombined  "CPU combined [%.1f]"   (System,All) { systeminfo="CpuCombined:5000" }
+Number cpuUser  "CPU user [%.1f]"   (System,All) { systeminfo="CpuUser:5000" }
+Number cpuSystem    "CPU system [%.1f]" (System,All) { systeminfo="CpuSystem:5000" }
+Number cpuNice  "CPU nice [%.1f]"   (System,All) { systeminfo="CpuNice:5000" }
+Number cpuWait "CPU wait [%.1f]"    (System,All) { systeminfo="CpuWait:5000" }
+
+Number uptime   "Uptime [%.1f]" (System,All) { systeminfo="Uptime:5000" }
+String uptimeFormatted  "Update formatted [%s]" (System,All) { systeminfo="UptimeFormatted:5000" }
+
+Number memFreePercentPeriod "MemFree chart selected [%.1f]" (System,All)
+Number memFreePercent       "Mem free [%.1f%%]" (System,All) { systeminfo="MemFreePercent:5000" }
+Number memUsed              "Mem used [%.1f]"   (System,All) { systeminfo="MemUsed:5000" }
+Number memUsedPercent       "Mem used [%.1f%%]" (System,All) { systeminfo="MemUsedPercent:5000" }
+Number memActualFree        "Mem actual free [%.1f]"    (System,All) { systeminfo="MemActualFree:5000" }
+Number memActualUsed        "Mem actual used [%.1f]"    (System,All) { systeminfo="MemActualUsed:5000" }
+Number memTotal             "Mem total [%.1f]"  (System,All) { systeminfo="MemTotal:5000" }
+
+Number swapFree "Swap free [%.1f]"  (System,All) { systeminfo="SwapFree:5000" }
+Number swapTotal    "Swap total [%.1f]" (System,All) { systeminfo="SwapTotal:5000" }
+Number swapUsed "Swap used [%.1f]"  (System,All) { systeminfo="SwapUsed:5000" }
+Number swapPageIn   "Swap pagein [%.1f]"    (System,All) { systeminfo="SwapPageIn:5000" }
+Number swapPageOut  "Swap pageout [%.1f]"   (System,All) { systeminfo="SwapPageOut:5000" }
+
+Number netTxBytes   "Next tx bytes [%.1f]"  (System,All) { systeminfo="NetTxBytes:5000:en1" }
+Number netRxBytes   "Next rx bytes [%.1f]"  (System,All) { systeminfo="NetRxBytes:5000:en1" }
+
+Number diskReads    "Disk reads [%.1f]" (System,All) { systeminfo="DiskReads:5000:/dev/disk1" }
+Number diskWrites   "Disk writes [%.1f]"    (System,All) { systeminfo="DiskWrites:5000:/dev/disk1" }
+Number diskReadBytes    "Disk read bytes [%.1f]"    (System,All) { systeminfo="DiskReadBytes:5000:/dev/disk1" }
+Number diskWriteBytes   "Disk write bytes [%.1f]"   (System,All) { systeminfo="DiskWriteBytes:5000:/dev/disk1" }
+
+Number dirUsage "Dir usage [%.1f]"  (System,All) { systeminfo="DirUsage:5000:/Users/foo" }
+Number dirFiles "Dir files [%.1f]"  (System,All) { systeminfo="DirFiles:5000:/Users/foo" }
+
+Number openhabRealMem   "Real mem [%.1f]"   (System,All) { systeminfo="ProcessRealMem:5000:$$" }
+Number openhabVirtualMem    "Virtual mem [%.1f]"    (System,All) { systeminfo="ProcessVirtualMem:5000:$$" }
+Number openhabCpuPercent    "Cpu percent [%.1f%%]"  (System,All) { systeminfo="ProcessCpuPercent:5000:$$" }
+Number openhabCpuSystem "CPU system [%.1f]" (System,All) { systeminfo="ProcessCpuSystem:5000:$$" }
+Number openhabCpuUser   "CPU user [%.1f]"   (System,All) { systeminfo="ProcessCpuUser:5000:$$" }
+Number openhabCpuTotal  "CPU total [%.1f]"  (System,All) { systeminfo="ProcessCpuTotal:5000:$$" }
+Number openhabUptime    "Uptime [%d]"   (System,All) { systeminfo="ProcessUptime:5000:$$" }
+String openhabUptimeFormatted   "Uptime form. [%s]" (System,All) { systeminfo="ProcessUptimeFormatted:5000:$$" }
+
+Number eclipseRealMem1  "Real mem1 [%.1f]"  (System,All) { systeminfo="<ProcessCpuPercent:10000:eclipse" }
+Number eclipseRealMem2  "Real mem2 [%.1f]"  (System,All) { systeminfo="<ProcessCpuPercent:10000:*eclipse" }
+Number eclipseRealMem3  "Real mem3 [%.1f]"  (System,All)  { systeminfo="<ProcessCpuPercent:10000:eclipse*" }
+Number eclipseRealMem4  "Real mem4 [%.1f]"  (System,All) { systeminfo="<ProcessCpuPercent:10000:=eclipse" }
+Number eclipseRealMem5  "Real mem5 [%.1f]"  (System,All) { systeminfo="<ProcessCpuPercent:10000:#State.Name.eq=eclipse"

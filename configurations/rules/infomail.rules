@@ -1,0 +1,22 @@
+// Imports
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+import org.openhab.core.library.types.DecimalType
+
+// Global Variables
+val String mailto = "robo2006@hs-weingarten.de"
+val String subject = "TESTMAIL HiWi room is open"
+val String message = "Good evening,\n\nthe HiWi room is still open. Could someone take a look, please?\nKeep in mind to close the HiWi room after hours.\n\nEnjoy the evening\nIKI openHAB Server"
+
+rule "infomail"
+
+
+when
+	Time cron " 0 8 17  * * ?" //every day at 8pm
+//	Time cron "* * * * * ?"
+then
+	if (Door1_Hiwi.state == OPEN){//when the hiwi door is open
+	sendMail(mailto, subject, message)
+	}
+end
