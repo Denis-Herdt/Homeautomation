@@ -1,7 +1,7 @@
 # Smartlab with OpenHAB and Z-Wave
 
 With this repository comes the ability to set up a homeautomation-system, based on openHAB and Z-Wave.  
-It also provides a ROS-bridge and several extensions 
+It also provides a ROS-bridge and several extensions located at **smartlab/configurations** and **smartlab/configurations/rules/**
 
 **Table of content:**
 
