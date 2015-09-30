@@ -21,7 +21,7 @@ It also provides a ROS-bridge and several extensions (including tutorial-links),
 
 This project is specially adapted to the "Institut für Künstliche Intelligenz" at Hochschule Ravensburg-Weingarten with a user "iki" and the usual password
 
-The following Z-Wave-devices are included
+The following Z-Wave-devices are used for this projekt
 
 |Quantity   |Type               |Description                        |
 |-----------|-----------|-----------|
@@ -56,7 +56,7 @@ Note that some USB-controller can not enter the include-mode while pluged in an 
 
 ### OpenHAB
 
-OpenHAB is based on Java and is running on port 8080
+OpenHAB requires Java and is running on port 8080 by default
 
 * Clone the GIT-repository as normal user
 * Make the start-script executable
