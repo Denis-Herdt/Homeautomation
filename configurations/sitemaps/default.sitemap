@@ -74,8 +74,9 @@ sitemap zwave label="Smarlab"{
 		Text label="Info" icon="info"{
 			Text label="OpenHAB Server IKI HS-Weingarten" icon="none"
 			Text label="" icon="none"
-			Text label="Doku       		: http://141.69.58.11/various/smartlab" icon="none"
-			Text label="Configpage 		: {Server-IP}:8080/habmin/index.html" icon="none"
+			Text label="Doku       		:" url="http://141.69.58.11/various/smartlab" icon="none"
+			Text label="HABmin Configpage	: http://{Server-IP}:8080/habmin/index.html" icon="none"
+			Text label="External Webpage	: http://{Server-IP}:8080/openhab.app?sitemap=extern
 
 		}
 	}

@@ -10,9 +10,9 @@ sitemap zwave label="Smarlab"{
 		Text label="Info" icon="info"{
 			Text label="OpenHAB Server IKI HS-Weingarten" icon="none"
 			Text label="" icon="none"
-			Text label="Doku       : GitHUB-URL" icon="none"
-			Text label="Server IP  : localhost:8080" icon="none"
-			Text label="Configpage : localhost:8080/habmin/index.html" icon="none"
+			Text label="Doku       		:" url="http://141.69.58.11/various/smartlab" icon="none"
+			Text label="HABmin Configpage	: http://{Server-IP}:8080/habmin/index.html" icon="none"
+			Text label="Default Webpage	: http://{Server-IP}:8080/
 			
 		}
 	}
